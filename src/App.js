@@ -1,10 +1,11 @@
 import { useState } from "react";
-import ChartWrapper from "./ChartWrapper"
+import ChartWrapper from "./ChartWrapper";
 
 function App() {
   return (
     <div className="App">
       <h1>APP</h1>
+      <ChartWrapper />
     </div>
   );
 }
