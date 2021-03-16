@@ -9,7 +9,7 @@ const ChartWrapper = () => {
     if (!chart) {
       setChart(new D3Chart(chartArea.current));
     } else {
-      chart.update();
+    //   chart.update();
     }
   }, [chart]);
 

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import ChartWrapper from "./ChartWrapper";
 
 function App() {
