@@ -1,20 +1,19 @@
-import React, { Component } from "react";
+import { useRef, useEffect, useState } from "react";
 import D3Chart from "./D3Chart";
 
-class ChartWrapper extends Component {
-  chartRef = React.createRef();
+const ChartWrapper = () => {
+  const chartArea = useRef(null);
+  const [chart, setChart] = useState(null);
 
-  componentDidMount() {
-    new D3Chart(this.chartRef.current);
-  }
+  useEffect(() => {
+    if (!chart) {
+      setChart(new D3Chart(chartArea.current));
+    } else {
+      chart.update();
+    }
+  }, [chart]);
 
-  render() {
-    return (
-      <div ref={this.chartRef}>
-        <h2>Chart Wrapper</h2>
-      </div>
-    );
-  }
-}
+  return <div className="chart-area" ref={chartArea} />;
+};
 
 export default ChartWrapper;
