@@ -1,7 +1,6 @@
 import * as d3 from "d3";
 
 export default function D3Chart(element) {
-  const data = [30, 10, 65, 42, 20, 35];
   const url = "https://udemy-react-d3.firebaseio.com/ages.json";
   const svg = d3
     .select(element)
